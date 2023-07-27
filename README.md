@@ -28,6 +28,9 @@ Otherwise you might open the Cypress suite:
 `npx cypress open`
 And choose testIntuitivo.cy.js
 
+### Acceptance Criteria
+[Found here](acceptance-criteria.MD)
+
 ### Video demo:
 
 https://github.com/esbarila/intuitivo-challenge/assets/47305731/c83380b1-f55f-4fc3-9200-3e14761b568f
