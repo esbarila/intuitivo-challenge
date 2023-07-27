@@ -4,7 +4,8 @@
   "description": "Cypress challenge for Intuitivo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run cypress/e2e/testIntuitivo.cy.js",
+    "test-headed": "npx cypress run cypress/e2e/testIntuitivo.cy.js --headed"
   },
   "repository": {
     "type": "git",
