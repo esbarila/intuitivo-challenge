@@ -37,6 +37,10 @@ describe('Intuitivo Developer site Welcome screen', () => {
 
         cy.get('@jumpToModal').contains('Create transaction').click();
         cy.url().should('contain', 'post_transactions');
+
+        cy.visit('/reference/get_apops'); // just to find a visible <input> to chain type()
+        cy.get('#query-getApops_limit').type('{ctrl+/}'); // Keystrokes
+        cy.get('.Modal-FocusLock10lbWU4IwTQD').should('be.visible');
     })
 
     it('Checks the header search bar', () => {
@@ -45,5 +49,9 @@ describe('Intuitivo Developer site Welcome screen', () => {
         cy.get('[class*="SearchResults-list"]').find('span').should('contain', 'Authentication');
         cy.get('[class*="SearchResults-list"]').contains('Authentication').click()
         cy.url().should('contain', 'authentication');
+
+        cy.visit('/reference/get_apops');
+        cy.get('#query-getApops_limit').type('{ctrl+k}'); // Keystrokes
+        cy.get('[class*="AlgoliaSearch"]').should('be.visible');
     })
 })
