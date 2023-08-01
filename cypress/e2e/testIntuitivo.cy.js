@@ -51,7 +51,7 @@ describe('Intuitivo Developer site Welcome screen', () => {
         cy.url().should('contain', 'authentication');
 
         cy.visit('/reference/get_apops');
-        cy.get('#query-getApops_limit').type('{ctrl+k}'); // Keystrokes
+        cy.get('#query-getApops_limit').type('{ctrl+k}', { force: true }); // Keystrokes
         cy.get('[class*="AlgoliaSearch"]').should('be.visible');
     })
 })
